@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import CheckBox from './CheckBox.js'
 import Network from './Network.js'
-
+import { connect } from 'react-redux'
+import { getData } from './redux/action'
+import ReduxContainer from './Container';
 import './App.css';
 
 class App extends Component {
@@ -11,12 +13,16 @@ class App extends Component {
     this.state = {
       data: null
     }
+
+  
   }
-  jestCalling(data) {
+  async jestCalling(data) {
     this.setState({ data: data })
-    return data;
+   
+    return 20;
   }
   render() {
+  
     return (
       <div className="App">
         <p className="App-intro">
@@ -25,10 +31,15 @@ class App extends Component {
         <p>
           <CheckBox />
           <Network />
-          </p>
+          <ReduxContainer />
+        </p>
       </div>
     );
   }
 }
+
+
+
+
 
 export default App;

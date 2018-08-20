@@ -7,4 +7,4 @@ it('renders correctly', () => {
       .create(<App />)
       .toJSON();
     expect(tree).toMatchSnapshot();
-  });  
+  });   

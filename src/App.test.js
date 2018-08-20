@@ -4,7 +4,7 @@ import Enzyme, {shallow,mount} from 'enzyme';
 
 import CheckBox from './CheckBox.js'
 import Network from './Network.js'
-
+import ReduxApp from './ReduxApp.js'
 import renderer from 'react-test-renderer';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({adapter: new Adapter()});
@@ -17,7 +17,7 @@ Enzyme.configure({adapter: new Adapter()});
 //     expect(tree).toMatchSnapshot();
 //   });   
 
-//   it('function', () => {
+//   it('function', () => { 
 //     const tree = renderer
 //       .create(<App />).getInstance();
 //      // console.warn("tree console",tree.jestCalling(20));
@@ -31,15 +31,12 @@ Enzyme.configure({adapter: new Adapter()});
 //     expect(tree.state.data).toBe(30)
 //   });  
 
-
-
   test(' api test ', async () => {
     
     const tree =renderer.create(<Network />).getInstance()
-    
-  
-    console.warn("tree console", await tree.testApi());
-    
-  
+    // console.warn("tree console", await tree.testApi());
+
     expect(2).toEqual(2);
   }); 
+
+ 
